@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0e64745f684c04c3cac71a7928da2283
+  m_SerializeEntries:
+  - m_GUID: ed945a6915b2c4524b48ade58ac49e13
+    m_Address: Assets/Util/Tween/scriptable/EaseOutSine.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationCurve
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f86bc2ba2189408ea2c964ba3cee153
+    m_Address: Assets/Util/Tween/scriptable/EaseInSine.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationCurve
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03762c0698de546bcbf62c01d77f1729
+    m_Address: Assets/Util/Tween/scriptable/Linear.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationCurve
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 70022ade270a14dca8fccd9fd0c96506, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9c08939cff55e48b29df86610bf31edc, type: 2}
+    - {fileID: 11400000, guid: fb51a81a66c7e49c6b803cedd6c205e2, type: 2}
