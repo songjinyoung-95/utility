@@ -23,6 +23,9 @@ namespace Util.Tween
         public static Coroutine DoParabolicMove(Transform target, Vector3 startPos, Vector3 endPos, float time, float height, ECurveType curve = ECurveType.Linear, Action doneCallback = null)
         => Singleton.Tween_CoroutineStart(Co_ParabolicMove(target, startPos, endPos, time, height, curve, doneCallback));
 
+        public static Coroutine DoScale(Transform target, Vector3 startScale, Vector3 endScale, float time, ECurveType curve = ECurveType.Linear, Action donecallback = null)
+        => Singleton.Tween_CoroutineStart(Co_Scale(target, startScale, endScale, time, curve, donecallback));
+
 
         public static void AllStopTween() => Singleton.Tween_AllStopCoroutine();
         public static void StopTween(Coroutine coroutine) => Singleton.Tween_CoroutineStop(coroutine);
@@ -89,6 +92,24 @@ namespace Util.Tween
 
             moveTarget.position = endPos;
             doneCallback?.Invoke();
+        }        
+
+        private static IEnumerator Co_Scale(Transform target, Vector3 startScale, Vector3 endScale, float time, ECurveType curveType, Action donecallback)
+        {
+            float defaultTime       = 0;
+            target.localScale       = startScale;
+            AnimationCurve curve    = Singleton.Instance.GetCurveType(curveType);
+
+            while (defaultTime <= time)
+            {
+                target.localScale = Vector3.Lerp(startScale, endScale, curve.Evaluate(defaultTime / time));
+                
+                defaultTime += Time.deltaTime;
+                yield return null;
+            }
+
+            target.position = endScale;
+            donecallback?.Invoke();
         }        
     }
 }
