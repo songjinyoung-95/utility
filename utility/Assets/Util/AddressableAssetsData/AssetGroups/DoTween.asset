@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Packed Assets
+  m_Name: DoTween
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: DoTween
   m_Data:
     m_SerializedData: []
-  m_GUID: 049a79b64971e46f18398ef38c7639bd
+  m_GUID: 0e832437007f34cf5827f742908f1ec0
   m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 70022ade270a14dca8fccd9fd0c96506, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 79fb94a8567c44a83809eee4624f0c5a, type: 2}
-    - {fileID: 11400000, guid: 49e4e626ec8974816962c763eb08336d, type: 2}
+    - {fileID: 11400000, guid: a0ee49e69ac82404f850d46ffb2ed272, type: 2}
+    - {fileID: 11400000, guid: 0945aacc244c9413198e1ab2083e1911, type: 2}
