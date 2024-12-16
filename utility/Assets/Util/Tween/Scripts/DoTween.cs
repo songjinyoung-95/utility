@@ -12,23 +12,23 @@ namespace Util.Tween
     }
 
 
-    public class Tween
+    public class DoTween
     {
         public static Coroutine DOMove(Transform target, Vector3 startPos, Vector3 endPos, float time, ECurveType curve = ECurveType.Linear, Action donecallback = null)
-         => Singleton.Tween_CoroutineStart(Co_Move(target, startPos, endPos, time, curve, donecallback));
+         => TweenCoroutine.Tween_CoroutineStart(Co_Move(target, startPos, endPos, time, curve, donecallback));
 
         public static Coroutine DoRotate(Transform target, Quaternion startRot, Quaternion endRot, float time, ECurveType curve = ECurveType.Linear, Action donecallback = null)
-         => Singleton.Tween_CoroutineStart(Co_Rotate(target, startRot, endRot, time, curve, donecallback));
+         => TweenCoroutine.Tween_CoroutineStart(Co_Rotate(target, startRot, endRot, time, curve, donecallback));
 
         public static Coroutine DoParabolicMove(Transform target, Vector3 startPos, Vector3 endPos, float time, float height, ECurveType curve = ECurveType.Linear, Action doneCallback = null)
-        => Singleton.Tween_CoroutineStart(Co_ParabolicMove(target, startPos, endPos, time, height, curve, doneCallback));
+        => TweenCoroutine.Tween_CoroutineStart(Co_ParabolicMove(target, startPos, endPos, time, height, curve, doneCallback));
 
         public static Coroutine DoScale(Transform target, Vector3 startScale, Vector3 endScale, float time, ECurveType curve = ECurveType.Linear, Action donecallback = null)
-        => Singleton.Tween_CoroutineStart(Co_Scale(target, startScale, endScale, time, curve, donecallback));
+        => TweenCoroutine.Tween_CoroutineStart(Co_Scale(target, startScale, endScale, time, curve, donecallback));
 
 
-        public static void AllStopTween() => Singleton.Tween_AllStopCoroutine();
-        public static void StopTween(Coroutine coroutine) => Singleton.Tween_CoroutineStop(coroutine);
+        public static void AllStopTween() => TweenCoroutine.Tween_AllStopCoroutine();
+        public static void StopTween(Coroutine coroutine) => TweenCoroutine.Tween_CoroutineStop(coroutine);
 
 
         private static IEnumerator Co_Move(Transform target, Vector3 startPos, Vector3 endPos, float time, ECurveType curveType, Action donecallback)
@@ -36,7 +36,7 @@ namespace Util.Tween
             Transform moveTarget    = target;
             float defaultTime       = 0;
             target.position         = startPos;
-            AnimationCurve curve    = Singleton.Instance.GetCurveType(curveType);
+            AnimationCurve curve    = TweenCoroutine.GetCurveType(curveType);
 
             while (defaultTime <= time)
             {
@@ -55,7 +55,7 @@ namespace Util.Tween
             Transform moveTarget    = target;
             float defaultTime       = 0;
             target.rotation         = endRot;
-            AnimationCurve curve    = Singleton.Instance.GetCurveType(curveType);
+            AnimationCurve curve    = TweenCoroutine.GetCurveType(curveType);
 
             while (defaultTime <= time)
             {
@@ -74,7 +74,7 @@ namespace Util.Tween
             Transform moveTarget    = target;
             float elapsedTime       = 0f;
             Vector3 distance        = endPos - startPos;
-            AnimationCurve curve    = Singleton.Instance.GetCurveType(curveType);
+            AnimationCurve curve    = TweenCoroutine.GetCurveType(curveType);
 
             while (elapsedTime < time)
             {
@@ -98,7 +98,7 @@ namespace Util.Tween
         {
             float defaultTime       = 0;
             target.localScale       = startScale;
-            AnimationCurve curve    = Singleton.Instance.GetCurveType(curveType);
+            AnimationCurve curve    = TweenCoroutine.GetCurveType(curveType);
 
             while (defaultTime <= time)
             {
@@ -108,7 +108,7 @@ namespace Util.Tween
                 yield return null;
             }
 
-            target.position = endScale;
+            target.localScale = endScale;
             donecallback?.Invoke();
         }        
     }
