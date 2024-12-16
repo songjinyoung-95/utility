@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SimpleToastMessage
+  m_EditorClassIdentifier: 
+  m_GroupName: SimpleToastMessage
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 049a79b64971e46f18398ef38c7639bd
+  m_SerializeEntries:
+  - m_GUID: d865040a419b24bb7a5a5767203a70ab
+    m_Address: SimpleToastMessage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SimpleToastMessage
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 70022ade270a14dca8fccd9fd0c96506, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 79fb94a8567c44a83809eee4624f0c5a, type: 2}
+    - {fileID: 11400000, guid: 49e4e626ec8974816962c763eb08336d, type: 2}
