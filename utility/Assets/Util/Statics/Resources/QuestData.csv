@@ -1,8 +1,8 @@
-ID,dialog,reward,linkage_dialog
-1,tutorial,Null,
-2,-,Null,
-3,-,Null,
-4,-,Null,
+id,dialog,reward,linkage_dialog
+1,tutorial,NULL,
+2,-,NULL,
+3,-,NULL,
+4,-,NULL,
 5,,,
 6,,,
 7,,,

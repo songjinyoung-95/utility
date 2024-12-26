@@ -48,7 +48,7 @@ namespace Statics
             }
             else
             {
-                Debug.Log($"CSV가 성공적으로 JSON으로 변환되었습니다. \n파일 경로 : {jsonPath}");
+                Debug.Log($"CSV를 JSON으로 변경 완료하였습니다. <color=#FF1234>\n파일 경로 : {jsonPath}</color>");
             }
         }
     }
